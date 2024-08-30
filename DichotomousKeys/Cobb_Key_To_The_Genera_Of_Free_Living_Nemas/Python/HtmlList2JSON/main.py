@@ -3,13 +3,14 @@ from bs4 import BeautifulSoup
 import json
 
 # Fetch HTML from a URL
-def get_content(html_list):
+def get_content():
     url = "https://example.com/your-html-page.html"
     response = requests.get(url)
     html_content = response.content
 
     # Or load HTML from a local file
-    with open("your-html-file.html", "r") as f:
+    fn = '../../WWW3_TreeView.html'
+    with open(fn, "r") as f:
         html_content = f.read()
 
     soup = BeautifulSoup(html_content, "html.parser")
@@ -28,7 +29,7 @@ def html_list_to_json(html_list):
   """
   json_data = []
   for item in html_list.find_all("li"):
-    item_json = {"text": item.text.strip()}
+    item_json = {"node": item.text.strip()}
     child_list = item.find("ul") or item.find("ol")  # Check for both <ul> and <ol>
     if child_list:
       item_json["children"] = html_list_to_json(child_list)
@@ -36,6 +37,21 @@ def html_list_to_json(html_list):
   return json_data
 
 
-root_list = get_content()
-json_result = html_list_to_json(root_list)
-print(json.dumps(json_result, indent=2))
+
+
+
+def main():
+    # Use a breakpoint in the code line below to debug your script.
+    root_list = get_content()
+    json_result = html_list_to_json(root_list)
+    print(json.dumps(json_result, indent=2))
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    main()
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
+
