@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tree View</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=gScg73_-OY-WeM3JaYAt2wv1gDLm9bfGtF8OD5F_7a-iu3ZleFFR2aG3k9bwdLr8U-bxdywRsPC5jXa0J5J4RZQ2j0bu5O5RTJzDbIDYEpUPQBNSIri8a8Ktc04E8TrSUOzV5xJGsNsproklAC5pZ3KFTgC134SVbwF4cfSvo2yWff5b2nbaCHBGN2xrDCiMYc6OdxDwg30-9_NwePjlbQ" charset="UTF-8"></script>
+        <link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cDovL2xvY2FsaG9zdDo4MzgzL05lbWFLZXlzL05lbWFLZXlzLmdpdGh1Yi5pby9EaWNob3RvbW91c0tleXMvQ29iYl9LZXlfVG9fVGhlX0dlbmVyYV9PZl9GcmVlX0xpdmluZ19OZW1hcy9UcmVlVGVtcGxhdGUuaHRtbA"/>
+        <style>
+            ul, #myUL {
+                list-style-type: none;
+            }
+
+            #myUL {
+                margin: 0;
+                padding: 0;
+            }
+
+            .caret {
+                cursor: pointer;
+                -webkit-user-select: none;
+                /* Safari 3.1+ */
+                -moz-user-select: none;
+                /* Firefox 2+ */
+                -ms-user-select: none;
+                /* IE 10+ */
+                user-select: none;
+            }
+
+            .caret::before {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            .caret-down::before {
+                -ms-transform: rotate(90deg);
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                /* Safari */
+                '
+                transform: rotate(90deg);  
+                }
+
+                .nested {
+                display: none;
+                }
+
+                .active {
+                display: block;
+                }</style>
+        </head>
+        <body>
+            <h2>Tree View</h2>
+            <p>Click on the arrow(s) to open or close the tree branches.</p>
+            <ul id="myUL">
+                <li>
+                    <span class="caret">L1</span>
+                    <ul class="nested">
+                        <li>
+                            <span class="caret">L2</span>
+                            <ul class="nested">
+                                <li>
+                                    <span class="caret">L3</span>
+                                    <ul class="nested">
+                                        <li>
+                                            <span class="caret">L4</span>
+                                            <ul class="nested">
+                                                <li>
+                                                    <span class="caret">L5</span>
+                                                    <ul class="nested">
+                                                        <li>
+                                                            <span class="caret">L6</span>
+                                                            <ul class="nested">
+                                                                <li>
+                                                                    <span class="caret">L7</span>
+                                                                    <ul class="nested">
+                                                                        <li>
+                                                                            <span class="caret">L8</span>
+                                                                            <ul class="nested">
+                                                                                <li>
+                                                                                    <span class="caret">L9</span>
+                                                                                    <ul class="nested">
+                                                                                        <li>
+                                                                                            <span class="caret">L10</span>
+                                                                                            <ul class="nested">
+                                                                                                <li>
+                                                                                                    <span class="caret">L11</span>
+                                                                                                    <ul class="nested">
+                                                                                                        <li>
+                                                                                                            <span class="caret">L12</span>
+                                                                                                            <ul class="nested">
+                                                                                                                <li>L13</li>
+                                                                                                            </ul>
+                                                                                                        </li>
+                                                                                                    </ul>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <script>
+                var toggler = document.getElementsByClassName("caret");
+                var i;
+
+                for (i = 0; i < toggler.length; i++) {
+                    toggler[i].addEventListener("click", function() {
+                        this.parentElement.querySelector(".nested").classList.toggle("active");
+                        this.classList.toggle("caret-down");
+                    });
+                }
+            </script>
+        </body>
+    </html>
