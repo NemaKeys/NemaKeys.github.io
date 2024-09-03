@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Start</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            ul, #myUL {
+                list-style-type: none;
+            }
+
+            #myUL {
+                margin: 0;
+                padding: 0;
+            }
+
+            .caret {
+                cursor: pointer;
+                -webkit-user-select: none;
+                /* Safari 3.1+ */
+                -moz-user-select: none;
+                /* Firefox 2+ */
+                -ms-user-select: none;
+                /* IE 10+ */
+                user-select: none;
+            }
+
+            .caret::before {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            .caret-down::before {
+                -ms-transform: rotate(90deg);
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                /* Safari */
+
+                transform: rotate(90deg);
+            }
+
+            .nested {
+                display: none;
+            }
+
+            .active {
+                display: block;
+            }</style>
+    </head>
+    <body>
+        <h2>Key Start</h2>
+        <p>Click on the arrow(s) to open or close the tree branches.</p>
+        <ul id="myUL">
+            <li>
+                <span class="caret">Distinct Body 10X</span>
+            </li>
+            <li>
+                <span class="caret">Tripylella Genus<a href="https://www.researchgate.net/publication/273402569_A_New_Species_of_the_Genus_Tripylella_Brzeski_Winiszewska-Slipinska_1993_Nematoda_Triplonchida_Tripylidae_from_New_Zealand"> Reference</a></span>
+                <ul class="nested">
+                    <li>
+                        <span class="caret">Tail suddenly tapering near middle; cephalic setae very short</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret">Subventral teeth posterior to dorsal tooth</span>
+                                <ul class="nested">
+                                    <li>
+                                        <span class="caret">T. intermedia</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="caret">Subventral teeth anterior to dorsal tooth</span>
+                                <ul class="nested">
+                                    <li>
+                                        <span class="caret">T. subintermedia sp. nov.</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret">Tail slowly tapering near middle; cephalic setae longer</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret">Cephalic setae slender, 1/3 of labial width; body 1.1 to 1.4 mm long</span>
+                                <ul class="nested">
+                                    <li>
+                                        <span class="caret">T. maiuscula</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="caret">Cephalic setae thick, less than 1/3 of labial width; body less than1.0 mm long</span>
+                                <ul class="nested">
+                                    <li>
+                                        <span class="caret">Cephalic setae 1/6 to 1/5 of labial width; cardia spherical; body 0.8 to 1.0 mm long</span>
+                                        <ul class="nested">
+                                            <li>
+                                                <span class="caret">T. minuscula</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="caret">Cephalic setae 1/8 to 1/6 of labial width; cardia discoidal; body 0.68 to 0.75 mm long</span>
+                                        <ul class="nested">
+                                            <li>
+                                                <span class="caret">T. iucunda</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nested">
+                    <li>
+                        <span class="caret">Distinct Head 40X</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret">Distinct Tail 40X</span>
+                                <ul class="nested">
+                                    <li>
+                                        <span class="caret">L4</span>
+                                        <ul class="nested">
+                                            <li>
+                                                <span class="caret">L5</span>
+                                                <ul class="nested">
+                                                    <li>
+                                                        <span class="caret">L6</span>
+                                                        <ul class="nested">
+                                                            <li>
+                                                                <span class="caret">L7</span>
+                                                                <ul class="nested">
+                                                                    <li>
+                                                                        <span class="caret">L8</span>
+                                                                        <ul class="nested">
+                                                                            <li>
+                                                                                <span class="caret">L9</span>
+                                                                                <ul class="nested">
+                                                                                    <li>
+                                                                                        <span class="caret">L10</span>
+                                                                                        <ul class="nested">
+                                                                                            <li>
+                                                                                                <span class="caret">L11</span>
+                                                                                                <ul class="nested">
+                                                                                                    <li>
+                                                                                                        <span class="caret">L12</span>
+                                                                                                        <ul class="nested">
+                                                                                                            <li>L13</li>
+                                                                                                        </ul>
+                                                                                                    </li>
+                                                                                                </ul>
+                                                                                            </li>
+                                                                                        </ul>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+        <script>
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+
+            for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function () {
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+            }
+        </script>
+    </body>
+</html>
