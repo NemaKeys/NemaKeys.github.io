@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nematode Orders</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            ul, #myUL {
+                list-style-type: none;
+            }
+
+            #myUL {
+                margin: 0;
+                padding: 0;
+            }
+
+            .caret {
+                cursor: pointer;
+                -webkit-user-select: none;
+                /* Safari 3.1+ */
+                -moz-user-select: none;
+                /* Firefox 2+ */
+                -ms-user-select: none;
+                /* IE 10+ */
+                user-select: none;
+            }
+
+            .caret::before {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            .caret-down::before {
+                -ms-transform: rotate(90deg);
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                /* Safari */
+                
+                transform: rotate(90deg);  
+                }
+
+                .nested {
+                display: none;
+                }
+
+                .active {
+                display: block;
+                }</style>
+        </head>
+        <body>
+            <h2>Nematode Orders</h2>
+
+<ul>
+    <li>
+        Subclass <a href="Chromadoria ">Chromadoria </a>(13 841)
+        <ul>
+            <li>
+                Order <a href="Aphelenchida ">Aphelenchida </a>accepted as Aphelenchoidea Fuchs, 1937
+            </li>
+            <li>
+                Order <a href="Araeolaimida ">Araeolaimida </a>(543)
+            </li>
+            <li>
+                Order <a href="Ascaridida ">Ascaridida </a>accepted as Ascaridomorpha
+            </li>
+            <li>
+                Order <a href="Benthimermithida ">Benthimermithida </a>accepted as Plectida
+            </li>
+            <li>
+                Order <a href="Chromadorida ">Chromadorida </a>(861)
+            </li>
+            <li>
+                Order <a href="Desmodorida ">Desmodorida </a>(828)
+            </li>
+            <li>
+                Order <a href="Desmoscolecida ">Desmoscolecida </a>(335)
+            </li>
+        </ul>
+    </li>
+    <li>
+        Suborder <a href="Desmoscolecina">Desmoscolecina</a> (335)
+        <ul>
+            <li>
+                Order <a href="Diplogasterida ">Diplogasterida </a>accepted as Diplogasteromorpha
+            </li>
+            <li>
+                Order <a href="Monhysterida ">Monhysterida </a>(1 090)
+            </li>
+            <li>
+                Order <a href="Plectida ">Plectida </a>(696)
+            </li>
+            <li>
+                Order <a href="Rhabditida ">Rhabditida </a>(9 488)
+            </li>
+            <li>
+                Order <a href="Spirurida ">Spirurida </a>accepted as Rhabditida
+            </li>
+            <li>
+                Order <a href="Strongylida ">Strongylida </a>accepted as Rhabditida
+            </li>
+            <li>
+                Order <a href="Tylenchida ">Tylenchida </a>accepted as Tylenchomorpha
+            </li>
+        </ul>
+    </li>
+    <li>
+        Subclass <a href="Dorylaimia ">Dorylaimia </a>(4 109)
+        <ul>
+            <li>
+                Order <a href="Dioctophymatida ">Dioctophymatida </a>(16)
+            </li>
+            <li>
+                Order <a href="Dorylaimida ">Dorylaimida </a>(2 412)
+            </li>
+            <li>
+                Order <a href="Isolaimida ">Isolaimida </a>(13)
+            </li>
+            <li>
+                Order <a href="Marimermithida ">Marimermithida </a>(6)
+            </li>
+            <li>
+                Order <a href="Mermithida ">Mermithida </a>(884)
+            </li>
+            <li>
+                Order <a href="Mononchida ">Mononchida </a>(484)
+            </li>
+            <li>
+                Order <a href="Muspiceida ">Muspiceida </a>(15)
+            </li>
+            <li>
+                Order <a href="Trichinellida ">Trichinellida </a>(279)
+            </li>
+        </ul>
+    </li>
+    <li>
+        Subclass <a href="Enoplia ">Enoplia </a>(2 354)
+        <ul>
+            <li>
+                Order <a href="Enoplida ">Enoplida </a>(1 891)
+            </li>
+            <li>
+                Order <a href="Rhaptothyreida ">Rhaptothyreida </a>accepted as Enoplida
+            </li>
+            <li>
+                Order <a href="Trefusiida ">Trefusiida </a>accepted as Enoplida
+            </li>
+            <li>
+                Order <a href="Triplonchida ">Triplonchida </a>(463)
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+            <script>
+                var toggler = document.getElementsByClassName("caret");
+                var i;
+
+                for (i = 0; i < toggler.length; i++) {
+                    toggler[i].addEventListener("click", function() {
+                        this.parentElement.querySelector(".nested").classList.toggle("active");
+                        this.classList.toggle("caret-down");
+                    });
+                }
+            </script>
+        </body>
+    </html>
