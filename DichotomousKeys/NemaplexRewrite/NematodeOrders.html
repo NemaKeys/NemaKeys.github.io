@@ -31,7 +31,12 @@
                 display: inline-block;
                 margin-right: 6px;
             }
-
+            .caret_sink::before {
+                content: "\25B6";
+                color: red;
+                display: inline-block;
+                margin-right: 6px;
+            }
             .caret-down::before {
                 -ms-transform: rotate(90deg);
                 /* IE 9 */
@@ -50,7 +55,7 @@
                 }</style>
         </head>
         <body>
-            <h2>Tree View</h2>
+            <h2>Key to Nematode Orders</h2>
             <p>Click on the arrow(s) to open or close the tree branches.</p>
             <ul id="myUL">
                 <li>
@@ -66,7 +71,7 @@
                                             <span class="caret">Spicule protractor muscles attached to proximal enlargement; metanemes present; marine and fresh water</span>
                                             <ul class="nested">
                                                 <li>
-                                                    <span class="caret"><a href="./Order_Enoplida.html">Enoplida Filipjev, 1929</a></span>
+                                                    <span class="caret_sink"><a href="./Order/Order_Enoplida.html">Enoplida Filipjev, 1929</a></span>
                                                 </li>
                                             </ul>
                                         </li>
