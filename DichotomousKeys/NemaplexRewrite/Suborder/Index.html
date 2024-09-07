@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Suborder Rhabditina</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            ul, #myUL {
+                list-style-type: none;
+            }
+
+            #myUL {
+                margin: 0;
+                padding: 0;
+            }
+
+            .caret {
+                cursor: pointer;
+                -webkit-user-select: none;
+                /* Safari 3.1+ */
+                -moz-user-select: none;
+                /* Firefox 2+ */
+                -ms-user-select: none;
+                /* IE 10+ */
+                user-select: none;
+            }
+
+            .caret::before {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            .caret_sink::before {
+                content: "\25B6";
+                color: red;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+            .caret-down::before {
+                -ms-transform: rotate(90deg);
+                /* IE 9 */
+                -webkit-transform: rotate(90deg);
+                /* Safari */
+
+                transform: rotate(90deg);
+            }
+
+            .nested {
+                display: none;
+            }
+
+            .active {
+                display: block;
+            }</style>
+    </head>
+    <body>
+        <h2>Suborder Rhabditina</h2>
+        <h2>A Taxonomic Review Of The Suborder Rhabditina (Nematoda : Secernentia)</h2>
+        <h2>István Andrássy</h2> 
+        <p>Click on the arrow(s) to open or close the tree branches.</p>
+        <ul id="myUL">
+            <li>
+                <span class="caret">Stoma well developed, either long, tubular, or wide, spacious, metastom with small denticles or large teeth; oesophagus in almost every case with a median bulb or swelling; female gonads generally didelphic; bursa present or secondarily reduced</span>
+                <ul class="nested">
+                    <li>
+                        <span class="caret">Oesophagus with two bulbs: with a muscular median bulb and a glandular terminal one- ~ valvular apparatus in the median bulb; stoma often wide, teeth conspicuous, usually large; bursa reduced in most cases</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret_sink">
+                                    <a href="./Suborder/Suborder Diplogastrina.html">Diplogastrina Meyl, 1960</a>
+                                </span>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret">Oesophagus with one bulb: only a terminal bulb present, valvular apparatus in the terminal bulb, stoma usually tubular, denticles small, often minucious; bursa well developed, only occasionally reduced</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret_sink">
+                                    <a href="./Suborder/Suborder Rhabditina.html">Rhabditina, Chitwood, 1933</a>
+                                </span>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="caret">Stoma small, mostly quite narrow, consisting of small dots in optical view, oesophagus without a median bulb or swelling, female gonads generally monodelphic, bursa lacking primarily</span>
+                <ul class="nested">
+                    <li>
+                        <span class="caret">Head margin strongly cuticularized and notched, or head bearing six bristles; female gonads amphi- or monodelphic; amphids behind the labial region, mostly weIl discernible</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret_sink">
+                                    <a href="./Suborder/Suborder Teratocephalina.html">Teratocephalina, Chitwood, 1933</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="caret">Head margin not cuticularized and only rarely notched, bristles never present; female gonads always monodelphic; amphids on the labial region (only exceptionally behind it), hardly discernible</span>
+                        <ul class="nested">
+                            <li>
+                                <span class="caret_sink">
+                                    <a href="./Suborder/Suborder Cephalobina.html">Cephalobina</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            var toggler = document.getElementsByClassName("caret");
+            var i;
+
+            for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function () {
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                });
+            }
+        </script>
+    </body>
+</html>
